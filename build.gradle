@@ -11,4 +11,10 @@ subprojects {
         mavenCentral()
         jcenter()
     }
+
+    ext {
+        springBootVersion = "1.3.5.RELEASE"
+        springCloudVersion = "1.1.1.RELEASE"
+    }
+
 }

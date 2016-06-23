@@ -1,0 +1,12 @@
+server:
+  context-path: /
+  port: 8080
+spring:
+  application:
+    name: Dabuild-web
+eureka:
+  instance:
+    hostname: localhost
+    nonSecurePort: 8761
+    leaseRenewalIntervalInSeconds: 1
+    leaseExpirationDurationInSeconds: 2

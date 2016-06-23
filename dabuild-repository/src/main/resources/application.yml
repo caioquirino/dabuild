@@ -1,0 +1,19 @@
+server:
+  context-path: /repository
+  port: 0
+spring:
+  application:
+    name: Dabuild-repository
+  cloud:
+    config:
+      discovery:
+        enabled: true
+        serviceId: config-server
+eureka:
+  instance:
+    appname: ${spring.application.name}
+    hostname: localhost
+    nonSecurePort: 8761
+    leaseRenewalIntervalInSeconds: 1
+    leaseExpirationDurationInSeconds: 2
+    instance-id: ${spring.application.name}:${spring.application.instance_id:${random.value}}

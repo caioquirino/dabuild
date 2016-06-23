@@ -1,4 +1,8 @@
 package com.github.dabuild.repository
 
-class ProjectRepository {
+import com.github.dabuild.repository.model.Project
+import org.springframework.data.repository.PagingAndSortingRepository
+
+interface ProjectRepository extends PagingAndSortingRepository<Project, Long> {
+
 }
