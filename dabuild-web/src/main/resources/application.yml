@@ -1,9 +1,8 @@
 server:
-  context-path: /
   port: 8080
 spring:
   application:
-    name: Dabuild-web
+    name: dabuild-web
 eureka:
   instance:
     hostname: localhost

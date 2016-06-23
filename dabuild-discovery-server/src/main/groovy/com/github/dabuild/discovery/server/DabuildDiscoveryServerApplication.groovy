@@ -1,4 +1,4 @@
-package br.com.github.discovery.server
+package com.github.dabuild.discovery.server
 
 
 import org.springframework.boot.SpringApplication
