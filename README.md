@@ -17,6 +17,8 @@ dabuild-config-server: Configuration Server - Spring Cloud Config
 dabuild-discovery-server: Discovery Server - Eureka
 
 
+## Deployment
+
 With dabuild you can have two deployment types:
 
 1 - As a single docker container, used for small environments or for testing.
