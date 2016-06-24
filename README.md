@@ -21,6 +21,6 @@ Docker Automated Build Infrastructure made easy with dabuild
 
 With dabuild you can have two deployment types:
 
-1 - As a single docker container, used for small environments or for testing.
+1. As a single docker container, used for small environments or for testing.
 
-2 - As a set of docker containers, used for clustered and production environments.
+2. As a set of docker containers, used for clustered and production environments.
