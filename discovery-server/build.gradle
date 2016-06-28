@@ -1,0 +1,30 @@
+apply plugin: 'groovy'
+apply plugin: 'docker'
+apply plugin: 'spring-boot'
+
+configurations {
+    provided.all*.exclude group: 'javax.servlet'
+}
+
+dependencies {
+
+    compile("org.springframework.cloud:spring-cloud-starter-eureka-server:${springCloudVersion}")
+
+    compile 'org.codehaus.groovy:groovy-all:2.4.7'
+    testCompile group: 'junit', name: 'junit', version: '4.12'
+}
+task buildDocker(type: Docker, dependsOn: build) {
+    push = dockerPush
+    jar.version=""
+    applicationName = "${jar.baseName}"
+    tagVersion=project.version
+
+    dockerfile = file('src/main/docker/Dockerfile')
+    doFirst {
+        copy {
+            from jar
+            from file('src/main/docker')
+            into stageDir
+        }
+    }
+}

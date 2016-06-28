@@ -2,11 +2,7 @@ package com.github.dabuild.repository.model
 
 import com.github.dabuild.repository.model.enumeration.BuildStatus
 
-import javax.persistence.Entity
-import javax.persistence.GeneratedValue
-import javax.persistence.GenerationType
-import javax.persistence.Id
-import javax.persistence.ManyToOne
+import javax.persistence.*
 
 @Entity
 class Build implements Serializable {
