@@ -8,7 +8,9 @@ Docker Automated Build Infrastructure made easy with dabuild
 
 * **dabuild-web**: Web Interface - TBD
 
-* **dabuild-service**: REST Services Interface for Web component - Spring MVC
+* **dabuild-service-api**: REST Services Interface for Web component - Spring MVC
+
+* **dabuild-service-impl**: REST Services Interface for Web component - Spring MVC
 
 * **dabuild-repository**: REST Repository for Service Interface - Spring Data REST
 
