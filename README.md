@@ -2,6 +2,12 @@
 Docker Automated Build Infrastructure made easy with dabuild
 
 
+## Instructions:
+
+* **Build**: ./gradlew clean build buildDocker
+* **Run**: docker-compose up
+
+
 ## Components:
 
 * **webhook-api**: Receive all Github (or webhook API) requests via HTTP - Spring MVC
