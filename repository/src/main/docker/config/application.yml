@@ -4,3 +4,8 @@ eureka:
   client:
     service-url:
       default-zone: http://discovery-server:80/eureka/
+
+spring:
+  cloud:
+    config:
+      uri: http://config-server:80

@@ -8,6 +8,7 @@ spring:
       discovery:
         enabled: true
         serviceId: config-server
+      uri: http://localhost:8888
 eureka:
   instance:
     appname: ${spring.application.name}
