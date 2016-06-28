@@ -4,19 +4,19 @@ Docker Automated Build Infrastructure made easy with dabuild
 
 ## Components:
 
-* **dabuild-webhook-api**: Receive all Github (or webhook API) requests via HTTP - Spring MVC
+* **webhook-api**: Receive all Github (or webhook API) requests via HTTP - Spring MVC
 
-* **dabuild-web**: Web Interface - TBD
+* **web**: Web Interface - TBD
 
-* **dabuild-service-api**: REST Services Interface for Web component - Spring MVC
+* **service-api**: REST Services Interface for Web component - Spring MVC
 
-* **dabuild-service-impl**: REST Services Interface for Web component - Spring MVC
+* **service**: REST Services Interface for Web component - Spring MVC
 
-* **dabuild-repository**: REST Repository for Service Interface - Spring Data REST
+* **repository**: REST Repository for Service Interface - Spring Data REST
 
-* **dabuild-config-server**: Configuration Server - Spring Cloud Config
+* **config-server**: Configuration Server - Spring Cloud Config
 
-* **dabuild-discovery-server**: Discovery Server - Eureka
+* **discovery-server**: Discovery Server - Eureka
 
 
 ## Deployment
