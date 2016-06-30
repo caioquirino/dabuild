@@ -1,6 +1,5 @@
 apply plugin: 'groovy'
 apply plugin: 'docker'
-apply plugin: 'spring-boot'
 
 configurations {
     provided.all*.exclude group: 'javax.servlet'
@@ -8,10 +7,10 @@ configurations {
 
 dependencies {
 
-    compile("org.springframework.cloud:spring-cloud-starter-eureka:${springCloudVersion}")
-    compile("org.springframework.cloud:spring-cloud-config-server:${springCloudVersion}")
-    // https://mvnrepository.com/artifact/org.eclipse.jgit/org.eclipse.jgit
-    compile group: 'org.eclipse.jgit', name: 'org.eclipse.jgit', version: '4.4.0.201606070830-r'
+    compile("org.springframework.boot:spring-boot")
+    compile("org.springframework.cloud:spring-cloud-starter-eureka")
+    compile("org.springframework.cloud:spring-cloud-config-server")
+    compile("org.eclipse.jgit:org.eclipse.jgit:4.4.0.201606070830-r")
 
 
     compile 'org.codehaus.groovy:groovy-all:2.4.7'

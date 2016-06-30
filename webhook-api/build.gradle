@@ -1,12 +1,11 @@
 apply plugin: 'groovy'
 apply plugin: 'docker'
-apply plugin: 'spring-boot'
 
 dependencies {
-    compile("org.springframework.boot:spring-boot-starter-actuator:${springBootVersion}")
-    compile("org.springframework.boot:spring-boot-starter-web:${springBootVersion}")
-    compile("org.springframework.cloud:spring-cloud-starter-config:${springCloudVersion}")
-    compile("org.springframework.cloud:spring-cloud-starter-eureka:${springCloudVersion}")
+    compile("org.springframework.boot:spring-boot-starter-actuator")
+    compile("org.springframework.boot:spring-boot-starter-web")
+    compile("org.springframework.cloud:spring-cloud-starter-config")
+    compile("org.springframework.cloud:spring-cloud-starter-eureka")
 
     compile 'org.codehaus.groovy:groovy-all:2.4.7'
     compile 'org.eclipse.mylyn.github:org.eclipse.egit.github.core:2.1.5'
