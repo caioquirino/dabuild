@@ -5,12 +5,11 @@ spring:
     config:
       discovery:
         enabled: true
-        serviceId: ${spring.application.name}
+        serviceId: dabuild-config-server
       server:
         bootstrap: true
         git:
-          uri: ${CONFIG_SERVER_GIT_URI:/tmp/dabuild-config}
-          basedir: ${CONFIG_SERVER_GIT_BASEDIR:.}
+          uri: ${CONFIG_SERVER_GIT_URI:/dabuild-config}
 eureka:
   client:
     serviceUrl:

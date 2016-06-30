@@ -1,4 +1,2 @@
 server:
   port: ${PORT:0}
-logging:
-  level.*: debug
