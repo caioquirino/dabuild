@@ -1,11 +1,11 @@
 spring:
   application:
-    name: dabuild-service
+    name: service
   cloud:
     config:
       discovery:
         enabled: true
-        serviceId: dabuild-config-server
+        serviceId: config-server
 eureka:
   client:
     serviceUrl:

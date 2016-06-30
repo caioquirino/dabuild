@@ -1,11 +1,11 @@
 spring:
   application:
-    name: dabuild-config-server
+    name: config-server
   cloud:
     config:
       discovery:
         enabled: true
-        serviceId: dabuild-config-server
+        serviceId: config-server
       server:
         bootstrap: true
         git:

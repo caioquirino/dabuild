@@ -13,6 +13,16 @@ services:
       - SERVICE_DISCOVERY_HOST=discovery-server
       - SERVICE_DISCOVERY_PORT=8080
 
+  proxy-server:
+    image: dabuild/proxy-server:1.0-SNAPSHOT
+    links:
+     - discovery-server
+    ports:
+      - "80:80"
+    environment:
+      - SERVICE_DISCOVERY_HOST=discovery-server
+      - SERVICE_DISCOVERY_PORT=8080
+
   repository:
     image: dabuild/repository:1.0-SNAPSHOT
     links:

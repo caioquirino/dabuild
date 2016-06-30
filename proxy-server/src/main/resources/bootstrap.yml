@@ -1,6 +1,6 @@
 spring:
   application:
-    name: webhook-api
+    name: proxy-server
   cloud:
     config:
       discovery:

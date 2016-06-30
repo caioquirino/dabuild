@@ -1,0 +1,9 @@
+server:
+  port: ${PORT:80}
+
+zuul:
+  routes:
+    webhook-api:
+      path: /webhook-api/**
+      serviceId: webhook-api
+

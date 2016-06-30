@@ -8,22 +8,22 @@ import org.springframework.web.bind.annotation.ResponseBody
 import org.springframework.web.bind.annotation.RestController
 import org.springframework.web.client.RestTemplate
 
-@RestController("/payload")
+@RestController
 class WebhookController {
 
     @Autowired
     private RestTemplate restTemplate;
 
-    @RequestMapping(headers = "X-GitHub-Event=push")
+    @RequestMapping(path="/payload", headers = "X-GitHub-Event=push")
     @ResponseBody
     public String pushEvent(@RequestBody PushPayload push) {
         System.out.println(push)
 
-        def object = restTemplate.getForObject("http://dabuild-repository/vc", String.class)
+        //def object = restTemplate.getForObject("http://repository/vc", String.class)
 
-        System.out.println(object)
+        //System.out.println(object)
 
-        object
+        return "TEST"
     }
 
 }
