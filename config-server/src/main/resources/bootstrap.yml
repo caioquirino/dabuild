@@ -1,3 +1,23 @@
 spring:
   application:
     name: dabuild-config-server
+  cloud:
+    config:
+      discovery:
+        enabled: true
+        serviceId: ${spring.application.name}
+      server:
+        bootstrap: true
+        git:
+          uri: ${CONFIG_SERVER_GIT_URI:/tmp/dabuild-config}
+          basedir: ${CONFIG_SERVER_GIT_BASEDIR:.}
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://${SERVICE_DISCOVERY_HOST}:${SERVICE_DISCOVERY_PORT}/eureka/
+  instance:
+    appname: ${spring.application.name}
+    leaseRenewalIntervalInSeconds: 3
+    leaseExpirationDurationInSeconds: 10
+    instance-id: ${spring.application.name}:${spring.application.instance_id:${random.value}}
+    preferIpAddress: true

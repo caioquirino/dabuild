@@ -1,10 +1,11 @@
 FROM java:8
 
-EXPOSE 80
-ENV PORT=80
+EXPOSE 8080
+ENV PORT=8080
 
 VOLUME /tmp
 RUN mkdir -p /app
 ADD . /app/
 WORKDIR /app
-ENTRYPOINT ["java","-Djava.security.egd=file:/dev/./urandom","-jar","discovery-server.jar", "-Dspring.config.location=file:config/"]
+RUN chmod +x /app/entrypoint.sh
+ENTRYPOINT /app/entrypoint.sh

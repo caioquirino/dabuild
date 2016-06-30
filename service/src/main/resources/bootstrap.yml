@@ -1,3 +1,18 @@
 spring:
   application:
     name: dabuild-service
+  cloud:
+    config:
+      discovery:
+        enabled: true
+        serviceId: dabuild-config-server
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://${SERVICE_DISCOVERY_HOST}:${SERVICE_DISCOVERY_PORT}/eureka/
+  instance:
+    appname: ${spring.application.name}
+    leaseRenewalIntervalInSeconds: 3
+    leaseExpirationDurationInSeconds: 10
+    instance-id: ${spring.application.name}:${spring.application.instance_id:${random.value}}
+    preferIpAddress: true

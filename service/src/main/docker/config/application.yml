@@ -3,7 +3,7 @@ server:
 eureka:
   client:
     service-url:
-      default-zone: http://discovery-server:80/eureka/
+      default-zone: http://discovery-server:8080/eureka/
   instance:
     hostname: discovery-server
     nonSecurePort: 80
